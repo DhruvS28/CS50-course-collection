@@ -4,12 +4,12 @@
 
 int main(void)
 {
-    float n;
+    float a;
     int c = 0;
     printf("Amount of change required:\n $ ");
-    n = get_float();
-    (n *= 100);
-
+    a = get_float();
+    (a *= 100);
+    int n = (int) round(a);
 do
 {
 if (n >= 25)
