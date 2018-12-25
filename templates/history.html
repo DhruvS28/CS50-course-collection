@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+    <style>
+        table, th, td { border: 1px solid black; border-collapse: collapse; }
+    </style>
+
+    <table style="width:100%">
+      <tr>
+        <th>Symbol</th>
+        <th>Shares</th>
+        <th>Total Price</th>
+        <th>Process</th>
+        <th>Date</th>
+      </tr>
+    {% for history in hist %}
+      <tr>
+        <td>{{ history.symbol }}</td>
+        <td>{{ history.shares }}</td>
+        <td>{{ history.price }}</td>
+        <td>{{ history.process }}</td>
+        <td>{{ history.date }}</td>
+      </tr>
+    {% endfor %}
+    </table>
+
+{% endblock %}
